@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEIÇÕES</title>
+    
+</head>
+<body>
+    <h1 id="resultado"> Nesse Ano de eleição você: </h1> <!-- Elemento onde a média será exibida -->
+    <script>
+        // ENTRADA > TODOS OS DADOS DO USUÁRIO
+
+        const ano_de_votar = Number(prompt( " Digite o ano de Eleição "));
+        const ano_de_nascimento = Number(prompt( " Digite o ano de você nasceu "))
+
+        const idade_pessoa = ano_de_votar - ano_de_nascimento
+
+        // PROCESSAMENTO > CALCULAR
+        let status_eleitor
+        if(idade_pessoa < 16){
+            status_eleitor = " Não pode Votar nessa Eleição";
+        } else if (idade_pessoa >= 16 && idade_pessoa < 18 ) {
+            status_eleitor = " Voto é Facultativo"
+         } else if ( idade_pessoa >= 18 && idade_pessoa <= 65 ) {
+                status_eleitor = 'Você é obrigado a votar nessa Eleição.';
+        } else { // idade maior que 65 anos
+            status_eleitor = " Voto é Facultativo"
+        }
+        
+
+
+        //SAÍDA > O RETORNO        
+        // Exibindo a média na tela dentro do elemento <h1>
+            document.getElementById('resultado').innerHTML = `Voce tem ${idade_pessoa} anos - ${status_eleitor}`;
+
+    </script>
+
+
+
+
+</body>
+</html>

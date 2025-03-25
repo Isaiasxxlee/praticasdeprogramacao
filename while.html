@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibindo números na tela</title>
+</head>
+<body>
+    <h1>Contador com While</h1>
+    <p id="resultado"></p> <!-- Local onde os números aparecerão -->
+
+    <script>
+        // quando uso o while? qundo eu nao sei a quantidade exata
+        let contador = 1; // O contador começa do número 1
+        let resultado = ""; // Variável para armazenar os números
+        const qnt = prompt(" Quantas repetições você deseja?")
+
+        while (contador <= 100) { // O loop roda de 1 a 10
+            resultado += contador + "<br>"; // Adiciona o número e quebra de linha
+            contador++; // Incrementa o contador (+1 a cada repetição)
+        }
+
+        document.getElementById("resultado").innerHTML = resultado; // Exibe na tela
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Simples</title>
+
+    <script>
+        function somar(){
+            // Obtendo os valores dos inputs
+            const n1 = Number(document.getElementById('n1').value);
+            const n2 = Number(document.getElementById('n2').value);
+
+            // Calculando a soma
+            const soma = n1 + n2;
+
+            // Exibindo o resultado com a conta formatada
+            document.getElementById('resultado').innerHTML = `${n1} + ${n2} = ${soma}`;
+        }
+
+        function subtrair(){
+            const n1 = Number(document.getElementById('n1').value);
+            const n2 = Number(document.getElementById('n2').value);
+
+            const subtracao = n1 - n2;
+
+            document.getElementById('resultado').innerHTML = `${n1} - ${n2} = ${subtracao}`;
+        }
+
+        function multiplicar(){
+            const n1 = Number(document.getElementById('n1').value);
+            const n2 = Number(document.getElementById('n2').value);
+
+            const multiplicacao = n1 * n2;
+
+            document.getElementById('resultado').innerHTML = `${n1} × ${n2} = ${multiplicacao}`;
+        }
+
+        function dividir(){
+            const n1 = Number(document.getElementById('n1').value);
+            const n2 = Number(document.getElementById('n2').value);
+
+            if (n2 === 0) {
+                document.getElementById('resultado').innerHTML = "Erro: Divisão por zero não permitida!";
+                return;
+            }
+
+            const divisao = n1 / n2;
+
+            document.getElementById('resultado').innerHTML = `${n1} ÷ ${n2} = ${divisao.toFixed(2)}`;
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <label for="n1">N1:</label>
+        <input type="text" id="n1"><br>
+
+        <label for="n2">N2:</label>
+        <input type="text" id="n2"><br>
+
+        <input type="button" value="Somar" onclick="somar()">
+        <input type="button" value="Subtrair" onclick="subtrair()">
+        <input type="button" value="Multiplicar" onclick="multiplicar()">
+        <input type="button" value="Dividir" onclick="dividir()">
+
+        <h1 id="resultado">O resultado aparecerá aqui</h1>
+    </form>
+</body>
+</html>

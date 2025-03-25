@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibindo números na tela</title>
+</head>
+<body>
+    <h1>Contador com For para nota e soma </h1>
+    <p id="resultado"></p> <!-- Local onde os números aparecerão -->
+    
+    <script>
+        // Estrutura básica do FOR: incialização, condição e incrementação
+        // Solicita ao usuário a quantidade de repetições
+        // quando uso o for? qundo eu sei a quantidade
+        const qnt = prompt(" Quantas notas você deseja?")
+        let resultado = ""; // Variável para armazenar os números
+        let soma = 0;
+        
+        // Laço for: começa em 1, vai até qnt, incrementando de 1 em 1
+        for (let contador = 1; // O contador começa do número 1
+        contador <= qnt;       
+        contador++) {
+            const nota = Number(prompt( " Digite a nota" + contador ));
+            soma = soma + nota;
+            //resultado += contador + "Nota $ {contador}: ${ nota}<br>"; 
+            // Adiciona o número com quebra de linha
+            // sinal de mais + vai concatenar
+        }
+        
+        const media = soma / qnt
+     
+        // Exibe na tela
+        document.getElementById("resultado").innerHTML =
+        //As tags <strong>...</strong> deixam o texto que estar no meio em negrito.
+        `<strong> A media das notas: ${media}</strong>`;
+        // document.getElementById("resultado").innerHTML = resultado; 
+    </script>
+</body>
+</html>
