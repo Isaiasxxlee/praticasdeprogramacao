@@ -56,8 +56,44 @@ function Jogar() {
 
     console.table(tabuleiro);
     exibir();
+    checar()
 }
 
 function checar() {
     // Implementação da verificação de vitória pode ser adicionada aqui
+    // linha
+    for(let i = 0; i < 3; i++){
+        let soma = 0 
+        soma = tabuleiro[i][0] + tabuleiro[i][1] + tabuleiro[i][2]
+
+        if( soma == 3 || soma == -3){
+            aviso.innerHTML = " o Jogador " + numeroJogador() + " Ganhou!!"
+        }
+    }
+    
+    // coluna >>> tabuleiro linha = [i]   coluna = [i]
+    for(let i = 0; i < 3; i++){
+        let soma = 0 
+        soma = tabuleiro[0][i] + tabuleiro[1][i] + tabuleiro[2][i]
+
+        if( soma == 3 || soma == -3){
+            aviso.innerHTML = " o Jogador " + numeroJogador() + " Ganhou!!"
+        }
+    }    
+
+    // Diagonal
+    for(let i = 0; i < 3; i++){
+        let soma = 0 
+        soma = tabuleiro[0][0] + tabuleiro[1][1] + tabuleiro[2][2]
+
+        if( soma == 3 || soma == -3){
+            aviso.innerHTML = " o Jogador " + numeroJogador() + " Ganhou!!"
+        }
+
+    }
+}
+
+function numeroJogador(){
+    return jogador%2 + 1
+
 }
