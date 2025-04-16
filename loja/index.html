@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lojinha</title>
+  <head>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Ícones do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  </head>
+  
+</head>
+<body>
+  <div class="container mt-4">
+    <h1><i class="bi bi-cart-check"></i> Lojinha do IP</h1>
+
+    <!-- <thead> — Cabeçalho da tabela -->
+    <table class="table table-hover table-bordered align-middle text-center">
+      <thead class="table-light">
+        <tr>
+          <th>Imagem</th>
+          <th>Descrição</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tbody> — Produtos (linhas da tabela)-->
+         <!-- Produto 1 -->
+        <tr>
+          <td><img src="produto/notebook.avif" alt="Notebook 1" width="120"></td>
+          <td>
+            <div>Notebook</div>
+            <div>Código: 123456</div>
+            <div>Cor: Prata</div>
+          </td>
+          <td>R$ 1000</td>
+          <td>
+            <div class="d-flex justify-content-center align-items-center gap-2">
+              <button class="btn btn-danger"><i class="bi bi-bag-dash"></i></button>
+              <span>0</span>
+              <button class="btn btn-success"><i class="bi bi-cart-plus"></i></button>
+            </div>
+          </td>
+          <td>R$ 0</td>
+        </tr>
+
+        <!-- Produto 2 -->
+        <tr>
+          <td><img src="produto/notebook.jpg" alt="Notebook 2" width="120"></td>
+          <td>
+            <div>Notebook</div>
+            <div>Código: 654321</div>
+            <div>Cor: Preta</div>
+          </td>
+          <td>R$ 1000</td>
+          <td>
+            <div class="d-flex justify-content-center align-items-center gap-2">
+              <button class="btn btn-danger"><i class="bi bi-bag-dash"></i></button>
+              <span>0</span>
+              <button class="btn btn-success"><i class="bi bi-cart-plus"></i></button>
+            </div>
+          </td>
+          <td>R$ 0</td>
+        </tr>
+
+        <!-- Produto 3 -->
+        <tr>
+          <td><img src="produto/celular.webp" alt="Celular" width="120"></td>
+          <td>
+            <div>Celular</div>
+            <div>Código: 102030</div>
+            <div>Cor: Preta</div>
+          </td>
+          <td>R$ 1000</td>
+          <td>
+            <div class="d-flex justify-content-center align-items-center gap-2">
+              <button class="btn btn-danger"><i class="bi bi-bag-dash"></i></button>
+              <span>0</span>
+              <button class="btn btn-success"><i class="bi bi-cart-plus"></i></button>
+            </div>
+          </td>
+          <td>R$ 0</td>
+        </tr>
+
+        <!-- Produto 4 -->
+        <tr>
+          <td><img src="produto/tv.webp" alt="TV" width="120"></td>
+          <td>
+            <div>TV</div>
+            <div>Código: 809079</div>
+            <div>Cor: Preta</div>
+          </td>
+          <td>R$ 1000</td>
+          <td>
+            <div class="d-flex justify-content-center align-items-center gap-2">
+              <button class="btn btn-danger"><i class="bi bi-bag-dash"></i></button>
+              <span>0</span>
+              <button class="btn btn-success"><i class="bi bi-cart-plus"></i></button>
+            </div>
+          </td>
+          <td>R$ 0</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <footer class="text-center mt-4">
+      <strong><span class="bi bi-cart-check"></span> Subtotal: R$ 0,00</strong>
+    </footer>
+  </div>
+</body>
+</html>
