@@ -2,24 +2,25 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lojinha</title>
-  <head>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lojinha do IP</title>
 
-    <!-- Ícones do Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JavaScript personalizado -->
+  <script src="js/funcoes.js" defer></script>
 </head>
 <body>
   <div class="container mt-4">
-    <h1><i class="bi bi-cart-check"></i> Lojinha do IP</h1>
+    <h1 class="mb-4"><i class="bi bi-cart-check"></i> Lojinha do IP</h1>
 
-    <!-- <thead> — Cabeçalho da tabela -->
     <table class="table table-hover table-bordered align-middle text-center">
       <thead class="table-light">
         <tr>
@@ -31,8 +32,140 @@
         </tr>
       </thead>
       <tbody>
-        <!-- <tbody> — Produtos (linhas da tabela)-->
-         <!-- Produto 1 -->
+        <!-- Produto 1 -->
+        <tr>
+          <td><img src="produto/notebook.avif" alt="Notebook 1" width="120"></td>
+          <td>
+            <div><strong>Notebook</strong></div>
+            <div><span class="produto_item">Código:</span> 123456</div>
+            <div><span class="produto_item">Cor:</span> Prata</div>
+          </td>
+          <td id="valor_1">R$ 1000</td>
+          <td>
+            <div class="d-flex justify-content-center align-items-center gap-2">
+              <button class="btn btn-danger" onclick="retirar(1)"><i class="bi bi-bag-dash"></i></button>
+              <span id="Quantidade_1">0</span>
+              <button class="btn btn-success" onclick="adicionar(1)"><i class="bi bi-cart-plus"></i></button>
+            </div>
+          </td>
+          <td id="total_1">R$ 0</td>
+        </tr>
+
+        <!-- Produto 2 -->
+        <tr>
+          <td><img src="produto/notebook.jpg" alt="Notebook 2" width="120"></td>
+          <td>
+            <div><strong>Notebook</strong></div>
+            <div><span class="produto_item">Código:</span> 1822</div>
+            <div><span class="produto_item">Cor:</span> Preto</div>
+          </td>
+          <td id="valor_2">R$ 1500</td>
+          <td>
+            <div class="d-flex justify-content-center align-items-center gap-2">
+              <button class="btn btn-danger" onclick="retirar(2)"><i class="bi bi-bag-dash"></i></button>
+              <span id="Quantidade_2">0</span>
+              <button class="btn btn-success" onclick="adicionar(2)"><i class="bi bi-cart-plus"></i></button>
+            </div>
+          </td>
+          <td id="total_2">R$ 0</td>
+        </tr>
+
+        <!-- Produto 3 -->
+        <tr>
+          <td><img src="produto/celular.webp" alt="Celular" width="120"></td>
+          <td>
+            <div><strong>Celular</strong></div>
+            <div><span class="produto_item">Código:</span> 182736</div>
+            <div><span class="produto_item">Cor:</span> Cinza</div>
+          </td>
+          <td id="valor_3">R$ 2000</td>
+          <td>
+            <div class="d-flex justify-content-center align-items-center gap-2">
+              <button class="btn btn-danger" onclick="retirar(3)"><i class="bi bi-bag-dash"></i></button>
+              <span id="Quantidade_3">0</span>
+              <button class="btn btn-success" onclick="adicionar(3)"><i class="bi bi-cart-plus"></i></button>
+            </div>
+          </td>
+          <td id="total_3">R$ 0</td>
+        </tr>
+
+        <!-- Produto 4 -->
+        <tr>
+          <td><img src="produto/tv.webp" alt="TV" width="120"></td>
+          <td>
+            <div><strong>TV</strong></div>
+            <div><span class="produto_item">Código:</span> 135676</div>
+            <div><span class="produto_item">Cor:</span> Preta</div>
+          </td>
+          <td id="valor_4">R$ 3000</td>
+          <td>
+            <div class="d-flex justify-content-center align-items-center gap-2">
+              <button class="btn btn-danger" onclick="retirar(4)"><i class="bi bi-bag-dash"></i></button>
+              <span id="Quantidade_4">0</span>
+              <button class="btn btn-success" onclick="adicionar(4)"><i class="bi bi-cart-plus"></i></button>
+            </div>
+          </td>
+          <td id="total_4">R$ 0</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <footer class="text-center mt-4">
+      <strong><span class="bi bi-cart-check"></span> Subtotal: <span id="subtotal">R$ 0,00</span></strong>
+    </footer>
+  </div>
+
+  <!-- Bootstrap JS Bundle (com Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lojinha</title>
+  
+      Bootstrap CSS 
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+
+      <! Ícones do Bootstrap -->
+     <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+     <link rel="stylesheet" href="css/style.css">
+
+     <script src="js/funcoes.js"></script>
+
+</head>
+<body>
+  <div class="container mt-4">
+    <h1><i class="bi bi-cart-check"></i> Lojinha do IP</h1> -->
+
+    <!-- <thead> — Cabeçalho da tabela 
+    <table class="table table-hover table-bordered align-middle text-center">
+      <thead class="table-light">
+        <tr>
+          <th>Imagem</th>
+          <th>Descrição</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+         <tbody> — Produtos (linhas da tabela)
+          Produto 1 
         <tr>
           <td><img src="produto/notebook.avif" alt="Notebook 1" width="120"></td>
           <td>
@@ -40,18 +173,18 @@
             <div><span class="produto_item">Código:</span> 123456</div>
             <div><span class="produto_item">Cor:</span> Prata</div>
           </td>
-          <td>R$ 1000</td>
+          <td id="valor_1">R$ 1000</td>
           <td>
             <div class="d-flex justify-content-center align-items-center gap-2">
-              <button class="btn btn-danger"><i class="bi bi-bag-dash"></i></button>
-              <span>0</span>
-              <button class="btn btn-success"><i class="bi bi-cart-plus"></i></button>
+              <button class="btn btn-danger" onclick="retirar(1)"><i class="bi bi-bag-dash"></i></button>
+              <span id="Quantidade_1">0</span>
+              <button class="btn btn-success" onclick="adicionar(1)"><i class="bi bi-cart-plus"></i></button>
             </div>
           </td>
-          <td>R$ 0</td>
+          <td id="total_1">R$ 0</td>
         </tr>
 
-        <!-- Produto 2 -->
+       Produto 2 
         <tr>
           <td><img src="produto/notebook.jpg" alt="Notebook 2" width="120"></td>
           <td>
@@ -59,18 +192,18 @@
             <div><span class="produto_item">Código:</span> 1822</div>
             <div><span class="produto_item">Cor:</span> Preto</div>
           </td>
-          <td>R$ 1000</td>
+          <td id="valor_2">R$ 1500</td>
           <td>
             <div class="d-flex justify-content-center align-items-center gap-2">
-              <button class="btn btn-danger"><i class="bi bi-bag-dash"></i></button>
-              <span>0</span>
-              <button class="btn btn-success"><i class="bi bi-cart-plus"></i></button>
+              <button class="btn btn-danger" onclick="retirar(2)"><i class="bi bi-bag-dash"></i></button>
+              <span id="Quantidade_2">0</span>
+              <button class="btn btn-success" onclick="adicionar(2)"><i class="bi bi-cart-plus"></i></button>
             </div>
           </td>
-          <td>R$ 0</td>
+          <td id="total_2">R$ 0</td>
         </tr>
 
-        <!-- Produto 3 -->
+        <Produto 3 
         <tr>
           <td><img src="produto/celular.webp" alt="Celular" width="120"></td>
           <td>
@@ -78,18 +211,18 @@
             <div><span class="produto_item">Código:</span> 182736</div>
             <div><span class="produto_item">Cor:</span> Cinza</div>
           </td>
-          <td>R$ 1000</td>
+          <td id="valor_3">R$ 2000</td>
           <td>
             <div class="d-flex justify-content-center align-items-center gap-2">
-              <button class="btn btn-danger"><i class="bi bi-bag-dash"></i></button>
-              <span>0</span>
-              <button class="btn btn-success"><i class="bi bi-cart-plus"></i></button>
+              <button class="btn btn-danger" onclick="retirar(3)"><i class="bi bi-bag-dash"></i></button>
+              <span id="Quantidade_3">0</span>
+              <button class="btn btn-success"onclick="adicionar(3)"><i class="bi bi-cart-plus"></i></button>
             </div>
           </td>
-          <td>R$ 0</td>
+          <td id="total_3">R$ 0</td>
         </tr>
 
-        <!-- Produto 4 -->
+         Produto 4 
         <tr>
           <td><img src="produto/tv.webp" alt="TV" width="120"></td>
           <td>
@@ -97,22 +230,24 @@
             <div><span class="produto_item">Código:</span> 135676</div>
             <div><span class="produto_item">Cor:</span> Preta</div>
           </td>
-          <td>R$ 1000</td>
+          <td id="valor_4">R$ 3000</td>
           <td>
             <div class="d-flex justify-content-center align-items-center gap-2">
-              <button class="btn btn-danger"><i class="bi bi-bag-dash"></i></button>
-              <span>0</span>
-              <button class="btn btn-success"><i class="bi bi-cart-plus"></i></button>
+              <button class="btn btn-danger" onclick="retirar(4)"><i class="bi bi-bag-dash"></i></button>
+              <span id="Quantidade_4">0</span>
+              <button class="btn btn-success"onclick="adicionar(4)"><i class="bi bi-cart-plus"></i></button>
             </div>
           </td>
-          <td>R$ 0</td>
+          <td id="total_4">R$ 0</td>
         </tr>
       </tbody>
     </table>
 
-    <footer class="text-center mt-4">
-      <strong><span class="bi bi-cart-check"></span> Subtotal: R$ 0,00</strong>
+     <footer class="text-center mt-4">
+      <strong><span class="bi bi-cart-check"></span> Subtotal: <span id="subtotal">R$ 0,00</span></strong>
     </footer>
+    
+
   </div>
 </body>
-</html>
+</html> -->
